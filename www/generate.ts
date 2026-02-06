@@ -122,6 +122,11 @@ const FRONTMATTER: Record<
     description: "Reference doc for the `SlackProvider`.",
     editUrl: `${config.github}/blob/master/packages/openauth/src/provider/slack.ts`,
   },
+  mastodon: {
+    title: "MastodonProvider",
+    description: "Reference doc for the `MastodonProvider`.",
+    editUrl: `${config.github}/blob/master/packages/openauth/src/provider/mastodon.ts`,
+  },
   jumpcloud: {
     title: "JumpCloudProvider",
     description: "Reference doc for the `JumpCloudProvider`.",
@@ -878,6 +883,7 @@ async function build() {
       "../packages/openauth/src/provider/github.ts",
       "../packages/openauth/src/provider/gitlab.ts",
       "../packages/openauth/src/provider/linkedin.ts",
+      "../packages/openauth/src/provider/mastodon.ts",
       "../packages/openauth/src/provider/password.ts",
       "../packages/openauth/src/provider/oauth2.ts",
       "../packages/openauth/src/provider/oidc.ts",

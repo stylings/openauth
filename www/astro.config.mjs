@@ -110,6 +110,7 @@ export default defineConfig({
             { label: "Facebook", slug: "docs/provider/facebook" },
             { label: "Keycloak", slug: "docs/provider/keycloak" },
             { label: "LinkedIn", slug: "docs/provider/linkedin" },
+            { label: "Mastodon", slug: "docs/provider/mastodon" },
             { label: "Password", slug: "docs/provider/password" },
             { label: "Microsoft", slug: "docs/provider/microsoft" },
             { label: "JumpCloud", slug: "docs/provider/jumpcloud" },
