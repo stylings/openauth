@@ -1,0 +1,188 @@
+---
+title: GitlabProvider
+editUrl: https://github.com/toolbeam/openauth/blob/master/packages/openauth/src/provider/gitlab.ts
+description: Reference doc for the `GitlabProvider`.
+---
+
+import {
+  Segment,
+  Section,
+  NestedTitle,
+  InlineSection,
+} from "toolbeam-docs-theme/components"
+import { Tabs, TabItem } from "@astrojs/starlight/components"
+
+<div class="tsdoc">
+<Section type="about">
+Use this provider to authenticate with GitLab.
+
+```ts {5-8}
+import { GitlabProvider } from "@openauthjs/openauth/provider/gitlab"
+
+export default issuer({
+  providers: {
+    gitlab: GitlabProvider({
+      clientID: "1234567890",
+      clientSecret: "0987654321",
+    }),
+  },
+})
+```
+
+You can also connect to a self-hosted GitLab instance by specifying the `instance` option:
+
+```ts {5-9}
+import { GitlabProvider } from "@openauthjs/openauth/provider/gitlab"
+
+export default issuer({
+  providers: {
+    gitlab: GitlabProvider({
+      clientID: "1234567890",
+      clientSecret: "0987654321",
+      instance: "gitlab.mycompany.com",
+    }),
+  },
+})
+```
+
+</Section>
+
+## Methods
+
+### GitlabProvider
+
+<Segment>
+<Section type="signature">
+```ts
+GitlabProvider(config)
+```
+</Section>
+<Section type="parameters">
+#### Parameters
+- <p><code class="key">config</code> [<code class="type">GitlabConfig</code>](/docs/provider/gitlab#gitlabconfig)</p>
+The config for the provider.
+</Section>
+<InlineSection>
+**Returns** <code class="type">Provider</code>
+</InlineSection>
+Create a GitLab OAuth2 provider.
+```ts
+GitlabProvider({
+  clientID: "1234567890",
+  clientSecret: "0987654321"
+})
+```
+</Segment>
+## GitlabConfig
+<Segment>
+<Section type="parameters">
+- <p>[<code class="key">clientID</code>](#gitlabconfig.clientid) <code class="primitive">string</code></p>
+- <p>[<code class="key">clientSecret</code>](#gitlabconfig.clientsecret) <code class="primitive">string</code></p>
+- <p>[<code class="key">instance?</code>](#gitlabconfig.instance) <code class="primitive">string</code></p>
+- <p>[<code class="key">pkce?</code>](#gitlabconfig.pkce) <code class="primitive">boolean</code></p>
+- <p>[<code class="key">query?</code>](#gitlabconfig.query) <code class="primitive">Record</code><code class="symbol">&lt;</code><code class="primitive">string</code>, <code class="primitive">string</code><code class="symbol">&gt;</code></p>
+- <p>[<code class="key">scopes</code>](#gitlabconfig.scopes) <code class="primitive">string</code><code class="symbol">[]</code></p>
+</Section>
+</Segment>
+<NestedTitle id="gitlabconfig.clientid" Tag="h4" parent="GitlabConfig.">clientID</NestedTitle>
+<Segment>
+<Section type="parameters">
+<InlineSection>
+**Type** <code class="primitive">string</code>
+</InlineSection>
+</Section>
+The client ID.
+
+This is just a string to identify your app.
+
+```ts
+{
+  clientID: "my-client"
+}
+```
+
+</Segment>
+<NestedTitle id="gitlabconfig.clientsecret" Tag="h4" parent="GitlabConfig.">clientSecret</NestedTitle>
+<Segment>
+<Section type="parameters">
+<InlineSection>
+**Type** <code class="primitive">string</code>
+</InlineSection>
+</Section>
+The client secret.
+
+This is a private key that's used to authenticate your app. It should be kept secret.
+
+```ts
+{
+  clientSecret: "0987654321"
+}
+```
+
+</Segment>
+<NestedTitle id="gitlabconfig.instance" Tag="h4" parent="GitlabConfig.">instance?</NestedTitle>
+<Segment>
+<Section type="parameters">
+<InlineSection>
+**Type** <code class="primitive">string</code>
+</InlineSection>
+</Section>
+
+<InlineSection>**Default** `gitlab.com`</InlineSection>
+The hostname of your self-hosted GitLab instance.
+
+By default, this is set to `gitlab.com`.
+
+```ts
+{
+  instance: "gitlab.mycompany.com"
+}
+```
+
+</Segment>
+<NestedTitle id="gitlabconfig.pkce" Tag="h4" parent="GitlabConfig.">pkce?</NestedTitle>
+<Segment>
+<Section type="parameters">
+<InlineSection>
+**Type** <code class="primitive">boolean</code>
+</InlineSection>
+</Section>
+
+<InlineSection>
+**Default** false
+</InlineSection>
+Whether to use PKCE (Proof Key for Code Exchange) for the authorization code flow.
+Some providers like x.com require this.
+</Segment>
+<NestedTitle id="gitlabconfig.query" Tag="h4" parent="GitlabConfig.">query?</NestedTitle>
+<Segment>
+<Section type="parameters">
+<InlineSection>
+**Type** <code class="primitive">Record</code><code class="symbol">&lt;</code><code class="primitive">string</code>, <code class="primitive">string</code><code class="symbol">&gt;</code>
+</InlineSection>
+</Section>
+Any additional parameters that you want to pass to the authorization endpoint.
+```ts
+{
+  query: {
+    access_type: "offline",
+    prompt: "consent"
+  }
+}
+```
+</Segment>
+<NestedTitle id="gitlabconfig.scopes" Tag="h4" parent="GitlabConfig.">scopes</NestedTitle>
+<Segment>
+<Section type="parameters">
+<InlineSection>
+**Type** <code class="primitive">string</code><code class="symbol">[]</code>
+</InlineSection>
+</Section>
+A list of OAuth scopes that you want to request.
+```ts
+{
+  scopes: ["email", "profile"]
+}
+```
+</Segment>
+</div>
