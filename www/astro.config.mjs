@@ -10,7 +10,7 @@ const url = "https://openauth.js.org"
 // https://astro.build/config
 export default defineConfig({
   site: url,
-  trailingSlash: 'always',
+  trailingSlash: "always",
   devToolbar: {
     enabled: false,
   },
@@ -76,10 +76,7 @@ export default defineConfig({
       components: {
         Hero: "./src/components/Hero.astro",
       },
-      customCss: [
-        "./src/custom.css",
-        "./src/styles/lander.css",
-      ],
+      customCss: ["./src/custom.css", "./src/styles/lander.css"],
       sidebar: [
         { label: "Intro", slug: "docs" },
         {
@@ -105,12 +102,14 @@ export default defineConfig({
             { label: "Yahoo", slug: "docs/provider/yahoo" },
             { label: "Google", slug: "docs/provider/google" },
             { label: "Github", slug: "docs/provider/github" },
+            { label: "Gitlab", slug: "docs/provider/gitlab" },
             { label: "Twitch", slug: "docs/provider/twitch" },
             { label: "Spotify", slug: "docs/provider/spotify" },
             { label: "Cognito", slug: "docs/provider/cognito" },
             { label: "Discord", slug: "docs/provider/discord" },
             { label: "Facebook", slug: "docs/provider/facebook" },
             { label: "Keycloak", slug: "docs/provider/keycloak" },
+            { label: "LinkedIn", slug: "docs/provider/linkedin" },
             { label: "Password", slug: "docs/provider/password" },
             { label: "Microsoft", slug: "docs/provider/microsoft" },
             { label: "JumpCloud", slug: "docs/provider/jumpcloud" },
@@ -118,11 +117,20 @@ export default defineConfig({
         },
         {
           label: "UI",
-          items: ["docs/ui/theme", "docs/ui/select", "docs/ui/code", "docs/ui/password"],
+          items: [
+            "docs/ui/theme",
+            "docs/ui/select",
+            "docs/ui/code",
+            "docs/ui/password",
+          ],
         },
         {
           label: "Storage",
-          items: ["docs/storage/memory", "docs/storage/dynamo", "docs/storage/cloudflare"],
+          items: [
+            "docs/storage/memory",
+            "docs/storage/dynamo",
+            "docs/storage/cloudflare",
+          ],
         },
       ],
     }),

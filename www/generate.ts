@@ -97,6 +97,11 @@ const FRONTMATTER: Record<
     description: "Reference doc for the `GithubProvider`.",
     editUrl: `${config.github}/blob/master/packages/openauth/src/provider/github.ts`,
   },
+  linkedin: {
+    title: "LinkedInProvider",
+    description: "Reference doc for the `LinkedInProvider`.",
+    editUrl: `${config.github}/blob/master/packages/openauth/src/provider/linkedin.ts`,
+  },
   microsoft: {
     title: "MicrosoftProvider",
     description: "Reference doc for the `MicrosoftProvider`.",
@@ -156,6 +161,11 @@ const FRONTMATTER: Record<
     title: "Oauth2Provider",
     description: "Reference doc for the `Oauth2Provider`.",
     editUrl: `${config.github}/blob/master/packages/openauth/src/provider/oauth2.ts`,
+  },
+  gitlab: {
+    title: "GitlabProvider",
+    description: "Reference doc for the `GitlabProvider`.",
+    editUrl: `${config.github}/blob/master/packages/openauth/src/provider/gitlab.ts`,
   },
   code: {
     title: "CodeProvider",
@@ -866,6 +876,8 @@ async function build() {
       "../packages/openauth/src/provider/apple.ts",
       "../packages/openauth/src/provider/google.ts",
       "../packages/openauth/src/provider/github.ts",
+      "../packages/openauth/src/provider/gitlab.ts",
+      "../packages/openauth/src/provider/linkedin.ts",
       "../packages/openauth/src/provider/password.ts",
       "../packages/openauth/src/provider/oauth2.ts",
       "../packages/openauth/src/provider/oidc.ts",
