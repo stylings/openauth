@@ -8,10 +8,17 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://sst.dev/discord"><img alt="Discord" src="https://img.shields.io/discord/983865673656705025?style=flat-square&label=Discord" /></a>
   <a href="https://www.npmjs.com/package/@openauthjs/openauth"><img alt="npm" src="https://img.shields.io/npm/v/%40openauthjs%2Fcore?style=flat-square" /></a>
-  <a href="https://github.com/toolbeam/openauth/actions/workflows/release.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/toolbeam/openauth/release.yml?style=flat-square&branch=master" /></a>
+  <a href="https://github.com/stylings/openauth/actions/workflows/release.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/stylings/openauth/release.yml?style=flat-square&branch=master" /></a>
 </p>
+
+---
+
+> **Community Fork Notice**
+>
+> This is a community-maintained fork of the original [OpenAuth](https://github.com/toolbeam/openauth) project, which has become inactive. This fork aims to continue development, add new features, and maintain compatibility.
+>
+> **New in this fork:** GitLab and LinkedIn providers, with more improvements coming soon!
 
 ---
 
@@ -306,6 +313,8 @@ console.log(verified.subject)
 
 ---
 
-OpenAuth is created by the maintainers of [SST](https://sst.dev).
+This is a community fork of OpenAuth, originally created by the maintainers of [SST](https://sst.dev).
 
-**Join our community** [Discord](https://sst.dev/discord) | [YouTube](https://www.youtube.com/c/sst-dev) | [X.com](https://x.com/SST_dev)
+**Contribute:** [GitHub Issues](https://github.com/stylings/openauth/issues) | [Pull Requests](https://github.com/stylings/openauth/pulls)
+
+**Original project:** [SST Discord](https://sst.dev/discord) | [SST YouTube](https://www.youtube.com/c/sst-dev) | [SST X](https://x.com/SST_dev)
